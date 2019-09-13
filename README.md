@@ -3,39 +3,39 @@
 Foram criados 5 widgets na pasta "responsive_widgets":
 
 ###### ContainerResponsive
-- `ContainerResponsive(`
-`    	child: ,`
-`    	height: ,` // double Responsive wight
-`    	heightResponsive: ,` // bool Enable/Disable Responsive height
-`    	width: ,` // double Responsive width
-`    	widthResponsive: ,` // bool Enable/Disable Responsive width
-`    )`
+- `ContainerResponsive(`<br>
+`    	child: ,`<br>
+`    	height: ,` // double Responsive wight<br>
+`    	heightResponsive: ,` // bool Enable/Disable Responsive height<br>
+`    	width: ,` // double Responsive width<br>
+`    	widthResponsive: ,` // bool Enable/Disable Responsive width<br>
+`    )`<br>
 
 ###### EdgeInsetsResponsive (Can be used in any widget with padding)
-- `Padding(`
-`    	child: ,`
-`    	padding: EdgeInsetsResponsive.all(50),` // EdgeInsets Responsive padding
-`    )`
+- `Padding(`<br>
+`    	child: ,`<br>
+`    	padding: EdgeInsetsResponsive.all(50),` // EdgeInsets Responsive padding<br>
+`    )`<br>
 
 ###### IconResponsive
-- `IconResponsive(`
-`    	icon`
-`    	size: double, `// Responsive size
-`    )`
+- `IconResponsive(`<br>
+`    	icon`<br>
+`    	size: double, `// Responsive size<br>
+`    )`<br>
 
 ###### IconButtonResponsive
-- `IconButtonResponsive(`
-`    	icon`
-`    	size: double,` // Responsive size
-`    )`
+- `IconButtonResponsive(`<br>
+`    	icon`<br>
+`    	size: double,` // Responsive size<br>
+`    )`<br>
 
 ###### TextResponsive
-- `TextResponsive(`
-`    	text` // Responsive fontSize
-`    )`
+- `TextResponsive(`<br>
+`    	text` // Responsive fontSize<br>
+`    )`<br>
 
 ### Função para recalcular tamanho responsivelmente
-Existem casos especiais que não possuem Widgets Responsivos criados, um caso disso é o Positioned, para resolver o problema é apenas colocar essa função `getSizeByDp(size)` que retornará o valor correto para a tela.
+Existem casos especiais que não possuem Widgets Responsivos criados, um caso disso é o Positioned, para resolver o problema é apenas colocar essa função `getSizeByDp(double size)` que retornará o valor correto para a tela.
 
 ## Examples
 

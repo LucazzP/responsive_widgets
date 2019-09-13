@@ -1,7 +1,5 @@
 # Responsive Widgets
 
-Foram criados 5 widgets na pasta "responsive_widgets":
-
 ###### ContainerResponsive
 - `ContainerResponsive(`<br>
 `    	child: ,`<br>

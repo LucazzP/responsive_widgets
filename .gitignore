@@ -5,3 +5,6 @@
 .pub/
 
 build/
+*.lock
+pubspec.lock
+example/pubspec.lock

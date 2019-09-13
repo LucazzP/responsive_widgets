@@ -1,5 +1,7 @@
 # Responsive Widgets
 
+`MediaQuery.of(context).size.shortestSide;`
+
 ###### ContainerResponsive
 - `ContainerResponsive(`<br>
 `    	child: ,`<br>

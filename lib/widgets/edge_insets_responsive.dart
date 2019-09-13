@@ -5,7 +5,7 @@
 import 'dart:ui' as ui show lerpDouble, WindowPadding;
 
 import 'package:flutter/widgets.dart';
-import '../screen_util.dart';
+import 'package:responsive_widgets/models/responsive_widgets_model.dart';
 
 /// An immutable set of offsets in each of the four cardinal directions.
 ///

@@ -5,14 +5,7 @@ class ScreenUtil {
   double _refrenceScreenWidth = 360;
   double _refrenceScreenDp = 411;
 
-  factory ScreenUtil() {
-    return _singleton;
-  }
-  static final ScreenUtil _singleton = ScreenUtil._internal();
-  ScreenUtil._internal() {
-    print("Instance created ScreenUtil");
-  }
-//region Screen Size and Proportional according to device
+  //region Screen Size and Proportional according to device
   double _screenHeight;
   double _screenWidth;
   double _screenDp;
@@ -33,7 +26,7 @@ class ScreenUtil {
     differenceScreenHeight = _screenHeight / _refrenceScreenHeight;
   }
 
-  void updateScreenReference({height, width, shortestSide}) {
+  void updateScreenReference({double height, double width, double shortestSide}) {
     _refrenceScreenWidth = (width != null) ? width : _refrenceScreenWidth;
     _refrenceScreenHeight = (height != null) ? height : _refrenceScreenHeight;
     _refrenceScreenDp =
@@ -67,14 +60,4 @@ class ScreenUtil {
     }
     return finalFontsize;
   }
-}
-
-/// By height and width of screen
-double getSizeByScreen(double size) {
-  return ScreenUtil().getSize(size);
-}
-
-/// By density of pixels
-double getSizeByDp(double size) {
-  return ScreenUtil().getSizeDp(size);
 }

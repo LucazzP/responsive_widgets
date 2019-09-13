@@ -7,7 +7,7 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../screen_util.dart';
+import 'package:responsive_widgets/models/responsive_widgets_model.dart';
 
 // Minimum logical pixel size of the IconButton.
 // See: <https://material.io/design/usability/accessibility.html#layout-typography>.

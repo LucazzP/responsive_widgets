@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import '../screen_util.dart';
+import 'package:responsive_widgets/models/responsive_widgets_model.dart';
 
 class ContainerResponsive extends Container{
     /// Creates a widget that combines common painting, positioning, and sizing widgets.

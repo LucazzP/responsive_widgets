@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(getSizeByDp(50)),
+        preferredSize: Size.fromHeight(getSize(50)),
         child: AppBar(
           title: TextResponsive('Plugin example app'),
           centerTitle: true,

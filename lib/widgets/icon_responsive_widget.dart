@@ -175,7 +175,7 @@ class IconResponsive extends Icon {
         style: TextStyle(
           inherit: false,
           color: iconColor,
-          fontSize: getSizeByDp(iconSize),
+          fontSize: getSize(iconSize),
           fontFamily: icon.fontFamily,
           package: icon.fontPackage,
         ),
@@ -201,8 +201,8 @@ class IconResponsive extends Icon {
       label: semanticLabel,
       child: ExcludeSemantics(
         child: SizedBox(
-          width: getSizeByDp(iconSize),
-          height: getSizeByDp(iconSize),
+          width: getSize(iconSize),
+          height: getSize(iconSize),
           child: Center(
             child: iconWidget,
           ),

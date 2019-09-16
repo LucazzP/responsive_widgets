@@ -279,13 +279,13 @@ class IconButtonResponsive extends IconButton {
       child: Padding(
         padding: padding,
         child: SizedBox(
-          height: getSizeByDp(iconSize),
-          width: getSizeByDp(iconSize),
+          height: getSize(iconSize),
+          width: getSize(iconSize),
           child: Align(
             alignment: alignment,
             child: IconTheme.merge(
               data: IconThemeData(
-                size: getSizeByDp(iconSize),
+                size: getSize(iconSize),
                 color: currentColor,
               ),
               child: icon,
@@ -316,7 +316,7 @@ class IconButtonResponsive extends IconButton {
           hoverColor: hoverColor ?? Theme.of(context).hoverColor,
           highlightColor: highlightColor ?? Theme.of(context).highlightColor,
           splashColor: splashColor ?? Theme.of(context).splashColor,
-          radius: getSizeByDp(math.max(
+          radius: getSize(math.max(
             Material.defaultSplashRadius,
             (iconSize + math.min(padding.horizontal, padding.vertical)) * 0.7,
             // x 0.5 for diameter -> radius and + 40% overflow derived from other Material apps.

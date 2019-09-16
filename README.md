@@ -1,52 +1,116 @@
+
 # Responsive Widgets
 
-`MediaQuery.of(context).size.shortestSide;`
+This plugin helps to create responsive widgets, that makes a auto-size with the **proportion between reference screen size** (width, height and shortest side(dpi))  with the screen that the app is running. The package only changed the original widgets, like "Container" to apply a function that make this calculation.
 
-###### ContainerResponsive
-- `ContainerResponsive(`<br>
-`    	child: ,`<br>
-`    	height: ,` // double Responsive wight<br>
-`    	heightResponsive: ,` // bool Enable/Disable Responsive height<br>
-`    	width: ,` // double Responsive width<br>
-`    	widthResponsive: ,` // bool Enable/Disable Responsive width<br>
-`    )`<br>
+## Getting Started  
 
-###### EdgeInsetsResponsive (Can be used in any widget with padding)
-- `Padding(`<br>
-`    	child: ,`<br>
-`    	padding: EdgeInsetsResponsive.all(50),` // EdgeInsets Responsive padding<br>
-`    )`<br>
+First of all you need to use the code `ResponsiveWidgets().init(context)` to make the plugin works. The code need to be placed on the first screen of the app, inside of the build method, like this: [See also in code](https://github.com/LucazzP/responsive_widgets/blob/master/example/lib/home_screen.dart)
 
-###### IconResponsive
-- `IconResponsive(`<br>
-`    	icon`<br>
-`    	size: double, `// Responsive size<br>
-`    )`<br>
 
-###### IconButtonResponsive
-- `IconButtonResponsive(`<br>
-`    	icon`<br>
-`    	size: double,` // Responsive size<br>
-`    )`<br>
+    class  _HomeScreenState  extends  State<HomeScreen> {
+	    @override
+	    Widget  build(BuildContext context) {
+	    
+		    ResponsiveWidgets().init(context,
+			    referenceHeight: 1920, // Optional
+			    referenceWidth: 1080, // Optional
+			    referenceShortestSide: 411 // Optional, default = 360
+		    );
+		    
+		    return  Scaffold(
+			    body: Container()
+		    );
+		}
+	}
 
-###### TextResponsive
-- `TextResponsive(`<br>
-`    	text` // Responsive fontSize<br>
-`    )`<br>
+ShortestSide is basically the dpi of the device, can be got by this code: `MediaQuery.of(context).size.shortestSide;`
+Or be changed in the device in Config>Developer Options>Drawing Section>ShortestSide.
 
-### Função para recalcular tamanho responsivelmente
-Existem casos especiais que não possuem Widgets Responsivos criados, um caso disso é o Positioned, para resolver o problema é apenas colocar essa função `getSizeByDp(double size)` que retornará o valor correto para a tela.
+## Widgets  
+
+#### ContainerResponsive
+
+    ContainerResponsive(
+	    child: Widget,
+	    height: double, // Responsive wight
+	    heightResponsive: bool, // Enable/Disable Responsive height
+	    width: double, // Responsive width
+	    widthResponsive: , bool// Enable/Disable Responsive width
+    )
+
+  
+
+#### EdgeInsetsResponsive (Can be used in any widget with parameter padding)
+
+    Padding(
+	    child: Widget,
+	    padding: EdgeInsetsResponsive.all(50), // EdgeInsets Responsive padding
+    )
+
+  
+
+#### IconResponsive
+
+    IconResponsive(
+	    icon,
+	    size: double, // Responsive size
+    )
+
+  
+
+#### IconButtonResponsive
+
+    IconButtonResponsive(
+        icon: IconData,
+		size: double, // Responsive size,
+		onTap: (){}   
+    )
+
+  
+
+#### TextResponsive
+
+    TextResponsive(
+	    text // Responsive fontSize
+    )
+
+#### RaisedButtonResponsive
+
+    RaisedButtonResponsive(
+	    child: Widget,
+	    onPressed: (){}
+    )
+  
+
+### Function to recalculate size responsibly
+
+Have special cases that doesn't have Responsive Widgets created, one of this cases is the Positioned, to solve this problem is simple use this function: `ResponsiveWidgets().getSize(double size)` that will return the correct value to the screen.
+
+  
 
 ## Examples
 
-###### ContainerResponsive
-[![Container responsive and EdgeInsets](https://imgur.com/uW9XCo8.jpg "Container responsive and EdgeInsets")](https://imgur.com/uW9XCo8.jpg "Container responsive and EdgeInsets")
+  
 
-###### IconResponsive
-[![IconResponsive](https://imgur.com/v4tilae.jpg "IconResponsive")](https://imgur.com/v4tilae.jpg "IconResponsive")
+- ### ContainerResponsive
 
-###### TextResponsive
-[![TextResponsive](https://imgur.com/kD2TTf7.jpg "TextResponsive")](https://imgur.com/kD2TTf7.jpg "TextResponsive")
+[![Container responsive and EdgeInsets](https://imgur.com/uW9XCo8.jpg "Container responsive and EdgeInsets")](https://imgur.com/uW9XCo8.jpg  "Container responsive and EdgeInsets")
 
-###### getSizeByDp(size)
-[![Function getSizeByDp](https://i.imgur.com/4p6hShM.jpg "Function getSizeByDp")](https://i.imgur.com/4p6hShM.jpg "Function getSizeByDp")
+  
+
+- ### IconResponsive
+
+[![IconResponsive](https://imgur.com/v4tilae.jpg "IconResponsive")](https://imgur.com/v4tilae.jpg  "IconResponsive")
+
+  
+
+- ### TextResponsive
+
+[![TextResponsive](https://imgur.com/kD2TTf7.jpg "TextResponsive")](https://imgur.com/kD2TTf7.jpg  "TextResponsive")
+
+  
+
+- ### ResponsiveWidgets().getSize(size)
+
+[![Function getSizeByDp](https://i.imgur.com/4p6hShM.jpg "Function getSize")](https://i.imgur.com/4p6hShM.jpg  "Function getSize")

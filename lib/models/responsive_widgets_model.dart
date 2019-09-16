@@ -24,12 +24,12 @@ class ResponsiveWidgets {
   }
 
   /// By density of pixels
-  double getSizeByDp(double size) {
-    return screenUtil.getSizeDp(size);
+  double getSize(double size) {
+    return screenUtil.getSize(size);
   }
 }
 
 /// By density of pixels
-double getSizeByDp(double size) {
-  return ResponsiveWidgets().getSizeByDp(size);
+double getSize(double size) {
+  return ResponsiveWidgets().getSize(size);
 }

@@ -55,7 +55,7 @@ class ScreenUtil {
     return w.ceilToDouble();
   }
 
-  double getSizeDp(double size) {
+  double getSize(double size) {
     double finalsize = size;
     if (this._screenWidth != null) {
       if (differenceDp == 0 &&

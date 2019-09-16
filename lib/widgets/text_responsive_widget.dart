@@ -143,7 +143,7 @@ class TextResponsive extends Text {
       softWrap: softWrap ?? defaultTextStyle.softWrap,
       overflow: overflow ?? defaultTextStyle.overflow,
       textScaleFactor:
-          getSizeByDp(textScaleFactor ?? MediaQuery.textScaleFactorOf(context)),
+          getSize(textScaleFactor ?? MediaQuery.textScaleFactorOf(context)),
       maxLines: maxLines ?? defaultTextStyle.maxLines,
       strutStyle: strutStyle,
       textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,

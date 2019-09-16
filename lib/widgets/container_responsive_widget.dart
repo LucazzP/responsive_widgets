@@ -45,17 +45,17 @@ class ContainerResponsive extends Container {
         constraints = (width != null || height != null)
             ? constraints?.tighten(
                     width: width != null && widthResponsive
-                        ? getSizeByDp(width)
+                        ? getSize(width)
                         : width,
                     height: height != null && heightResponsive
-                        ? getSizeByDp(height)
+                        ? getSize(height)
                         : height) ??
                 BoxConstraints.tightFor(
                     width: width != null && widthResponsive
-                        ? getSizeByDp(width)
+                        ? getSize(width)
                         : width,
                     height: height != null && heightResponsive
-                        ? getSizeByDp(height)
+                        ? getSize(height)
                         : height)
             : constraints,
         super(key: key);

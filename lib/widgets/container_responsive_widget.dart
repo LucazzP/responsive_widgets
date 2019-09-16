@@ -2,8 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_widgets/models/responsive_widgets_model.dart';
 
-class ContainerResponsive extends Container{
-    /// Creates a widget that combines common painting, positioning, and sizing widgets.
+class ContainerResponsive extends Container {
+  /// Creates a widget that combines common painting, positioning, and sizing widgets.
   ///
   /// The `height` and `width` values include the padding.
   ///
@@ -27,26 +27,38 @@ class ContainerResponsive extends Container{
     this.margin,
     this.transform,
     this.child,
-  }) : assert(margin == null || margin.isNonNegative),
-       assert(padding == null || padding.isNonNegative),
-       assert(decoration == null || decoration.debugAssertIsValid()),
-       assert(constraints == null || constraints.debugAssertIsValid()),
-       assert(color == null || decoration == null,
-         'Cannot provide both a color and a decoration\n'
-         'The color argument is just a shorthand for "decoration: new BoxDecoration(color: color)".'
-       ),
-       decoration = decoration ?? (color != null ? BoxDecoration(color: color) : null),
-      //  constraints =
-      //   (width != null || height != null)
-      //     ? constraints?.tighten(width: width, height: height)
-      //       ?? BoxConstraints.tightFor(width: width, height: height)
-      //     : constraints,
-       constraints =
-        (width != null || height != null)
-          ? constraints?.tighten(width: width != null && widthResponsive ? getSizeByDp(width) : width, height: height != null && heightResponsive ? getSizeByDp(height) : height)
-            ?? BoxConstraints.tightFor(width: width != null && widthResponsive ? getSizeByDp(width) : width, height: height != null && heightResponsive ? getSizeByDp(height) : height)
-          : constraints,
-       super(key: key);
+  })  : assert(margin == null || margin.isNonNegative),
+        assert(padding == null || padding.isNonNegative),
+        assert(decoration == null || decoration.debugAssertIsValid()),
+        assert(constraints == null || constraints.debugAssertIsValid()),
+        assert(
+            color == null || decoration == null,
+            'Cannot provide both a color and a decoration\n'
+            'The color argument is just a shorthand for "decoration: new BoxDecoration(color: color)".'),
+        decoration =
+            decoration ?? (color != null ? BoxDecoration(color: color) : null),
+        //  constraints =
+        //   (width != null || height != null)
+        //     ? constraints?.tighten(width: width, height: height)
+        //       ?? BoxConstraints.tightFor(width: width, height: height)
+        //     : constraints,
+        constraints = (width != null || height != null)
+            ? constraints?.tighten(
+                    width: width != null && widthResponsive
+                        ? getSizeByDp(width)
+                        : width,
+                    height: height != null && heightResponsive
+                        ? getSizeByDp(height)
+                        : height) ??
+                BoxConstraints.tightFor(
+                    width: width != null && widthResponsive
+                        ? getSizeByDp(width)
+                        : width,
+                    height: height != null && heightResponsive
+                        ? getSizeByDp(height)
+                        : height)
+            : constraints,
+        super(key: key);
 
   /// The [child] contained by the container.
   ///
@@ -109,11 +121,9 @@ class ContainerResponsive extends Container{
   final Matrix4 transform;
 
   EdgeInsetsGeometry get _paddingIncludingDecoration {
-    if (decoration == null || decoration.padding == null)
-      return padding;
+    if (decoration == null || decoration.padding == null) return padding;
     final EdgeInsetsGeometry decorationPadding = decoration.padding;
-    if (padding == null)
-      return decorationPadding;
+    if (padding == null) return decorationPadding;
     return padding.add(decorationPadding);
   }
 
@@ -149,8 +159,7 @@ class ContainerResponsive extends Container{
     if (constraints != null)
       current = ConstrainedBox(constraints: constraints, child: current);
 
-    if (margin != null)
-      current = Padding(padding: margin, child: current);
+    if (margin != null) current = Padding(padding: margin, child: current);
 
     if (transform != null)
       current = Transform(transform: transform, child: current);
@@ -161,12 +170,20 @@ class ContainerResponsive extends Container{
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty<AlignmentGeometry>('alignment', alignment, showName: false, defaultValue: null));
-    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('padding', padding, defaultValue: null));
-    properties.add(DiagnosticsProperty<Decoration>('bg', decoration, defaultValue: null));
-    properties.add(DiagnosticsProperty<Decoration>('fg', foregroundDecoration, defaultValue: null));
-    properties.add(DiagnosticsProperty<BoxConstraints>('constraints', constraints, defaultValue: null));
-    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('margin', margin, defaultValue: null));
+    properties.add(DiagnosticsProperty<AlignmentGeometry>(
+        'alignment', alignment,
+        showName: false, defaultValue: null));
+    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('padding', padding,
+        defaultValue: null));
+    properties.add(
+        DiagnosticsProperty<Decoration>('bg', decoration, defaultValue: null));
+    properties.add(DiagnosticsProperty<Decoration>('fg', foregroundDecoration,
+        defaultValue: null));
+    properties.add(DiagnosticsProperty<BoxConstraints>(
+        'constraints', constraints,
+        defaultValue: null));
+    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('margin', margin,
+        defaultValue: null));
     properties.add(ObjectFlagProperty<Matrix4>.has('transform', transform));
   }
 }

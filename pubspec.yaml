@@ -1,8 +1,11 @@
 name: responsive_widgets
-description: A new flutter plugin project.
-version: 0.0.1
-author:
-homepage:
+description: This plugin helps to create responsive widgets, that makes a auto-size with the proportion between reference Screen Size and the screen that the app is running. The package only changed the original widgets, like "Container" to apply a function that make this calculation.
+version: 0.1.0
+author: 
+  Lucas Henrique Polazzo
+  <lucashpolazzo2013@gmail.com>
+homepage: https://github.com/LucazzP
+repository: https://github.com/LucazzP/date_text_masked
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

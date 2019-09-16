@@ -54,12 +54,13 @@ import 'package:responsive_widgets/models/responsive_widgets_model.dart';
 ///    specified in a [TextDirection]-aware manner.
 class EdgeInsetsResponsive extends EdgeInsets {
   /// Creates insets from offsets from the left, top, right, and bottom.
-  EdgeInsetsResponsive.fromLTRB(double left, double top, double right, double bottom) 
-  : this.left = getSizeByDp(left),
-    this.top = getSizeByDp(top),
-    this.right = getSizeByDp(right),
-    this.bottom = getSizeByDp(bottom),
-  super.fromLTRB(left, top, right, bottom);
+  EdgeInsetsResponsive.fromLTRB(
+      double left, double top, double right, double bottom)
+      : this.left = getSizeByDp(left),
+        this.top = getSizeByDp(top),
+        this.right = getSizeByDp(right),
+        this.bottom = getSizeByDp(bottom),
+        super.fromLTRB(left, top, right, bottom);
 
   /// Creates insets where all the offsets are `value`.
   ///
@@ -72,10 +73,11 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// ```
   /// {@end-tool}
   EdgeInsetsResponsive.all(double value)
-    : left = getSizeByDp(value),
-      top = getSizeByDp(value),
-      right = getSizeByDp(value),
-      bottom = getSizeByDp(value), super.all(value);
+      : left = getSizeByDp(value),
+        top = getSizeByDp(value),
+        right = getSizeByDp(value),
+        bottom = getSizeByDp(value),
+        super.all(value);
 
   /// Creates insets with only the given values non-zero.
   ///
@@ -92,12 +94,11 @@ class EdgeInsetsResponsive extends EdgeInsets {
     double top = 0.0,
     double right = 0.0,
     double bottom = 0.0,
-  }) 
-  : this.left = getSizeByDp(left),
-    this.top = getSizeByDp(top),
-    this.right = getSizeByDp(right),
-    this.bottom = getSizeByDp(bottom),
-  super.only(left: left, top: top, right: right, bottom: bottom);
+  })  : this.left = getSizeByDp(left),
+        this.top = getSizeByDp(top),
+        this.right = getSizeByDp(right),
+        this.bottom = getSizeByDp(bottom),
+        super.only(left: left, top: top, right: right, bottom: bottom);
 
   /// Creates insets with symmetrical vertical and horizontal offsets.
   ///
@@ -112,10 +113,11 @@ class EdgeInsetsResponsive extends EdgeInsets {
   EdgeInsetsResponsive.symmetric({
     double vertical = 0.0,
     double horizontal = 0.0,
-  }) : left = getSizeByDp(horizontal),
-       top = getSizeByDp(vertical),
-       right = getSizeByDp(horizontal),
-       bottom = getSizeByDp(vertical), super.symmetric(vertical: vertical, horizontal: horizontal);
+  })  : left = getSizeByDp(horizontal),
+        top = getSizeByDp(vertical),
+        right = getSizeByDp(horizontal),
+        bottom = getSizeByDp(vertical),
+        super.symmetric(vertical: vertical, horizontal: horizontal);
 
   /// Creates insets that match the given window padding.
   ///
@@ -123,11 +125,13 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// widget, consider using [MediaQuery.of] to obtain these values rather than
   /// using the value from [dart:ui.window], so that you get notified of
   /// changes.
-  EdgeInsetsResponsive.fromWindowPadding(ui.WindowPadding padding, double devicePixelRatio)
-    : left = getSizeByDp(padding.left / devicePixelRatio),
-      top = getSizeByDp(padding.top / devicePixelRatio),
-      right = getSizeByDp(padding.right / devicePixelRatio),
-      bottom = getSizeByDp(padding.bottom / devicePixelRatio), super.fromWindowPadding(padding, devicePixelRatio);
+  EdgeInsetsResponsive.fromWindowPadding(
+      ui.WindowPadding padding, double devicePixelRatio)
+      : left = getSizeByDp(padding.left / devicePixelRatio),
+        top = getSizeByDp(padding.top / devicePixelRatio),
+        right = getSizeByDp(padding.right / devicePixelRatio),
+        bottom = getSizeByDp(padding.bottom / devicePixelRatio),
+        super.fromWindowPadding(padding, devicePixelRatio);
 
   /// An [EdgeInsets] with zero offsets in each direction.
   static const EdgeInsets zero = EdgeInsets.only();
@@ -193,7 +197,8 @@ class EdgeInsetsResponsive extends EdgeInsets {
   ///  * [inflateSize], to inflate a [Size] rather than a [Rect].
   ///  * [deflateRect], to deflate a [Rect] rather than inflating it.
   Rect inflateRect(Rect rect) {
-    return Rect.fromLTRB(rect.left - left, rect.top - top, rect.right + right, rect.bottom + bottom);
+    return Rect.fromLTRB(rect.left - left, rect.top - top, rect.right + right,
+        rect.bottom + bottom);
   }
 
   /// Returns a new rect that is smaller than the given rect in each direction by
@@ -210,20 +215,19 @@ class EdgeInsetsResponsive extends EdgeInsets {
   ///  * [deflateSize], to deflate a [Size] rather than a [Rect].
   ///  * [inflateRect], to inflate a [Rect] rather than deflating it.
   Rect deflateRect(Rect rect) {
-    return Rect.fromLTRB(rect.left + left, rect.top + top, rect.right - right, rect.bottom - bottom);
+    return Rect.fromLTRB(rect.left + left, rect.top + top, rect.right - right,
+        rect.bottom - bottom);
   }
 
   @override
   EdgeInsetsGeometry subtract(EdgeInsetsGeometry other) {
-    if (other is EdgeInsets)
-      return this - other;
+    if (other is EdgeInsets) return this - other;
     return super.subtract(other);
   }
 
   @override
   EdgeInsetsGeometry add(EdgeInsetsGeometry other) {
-    if (other is EdgeInsets)
-      return this + other;
+    if (other is EdgeInsets) return this + other;
     return super.add(other);
   }
 
@@ -311,12 +315,9 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// {@macro dart.ui.shadow.lerp}
   static EdgeInsets lerp(EdgeInsets a, EdgeInsets b, double t) {
     assert(t != null);
-    if (a == null && b == null)
-      return null;
-    if (a == null)
-      return b * t;
-    if (b == null)
-      return a * (1.0 - t);
+    if (a == null && b == null) return null;
+    if (a == null) return b * t;
+    if (b == null) return a * (1.0 - t);
     return EdgeInsets.fromLTRB(
       ui.lerpDouble(a.left, b.left, t),
       ui.lerpDouble(a.top, b.top, t),

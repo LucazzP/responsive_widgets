@@ -139,32 +139,14 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// The offset from the left.
   final double left;
 
-  @override
-  double get _left => left;
-
   /// The offset from the top.
   final double top;
-
-  @override
-  double get _top => top;
 
   /// The offset from the right.
   final double right;
 
-  @override
-  double get _right => right;
-
   /// The offset from the bottom.
   final double bottom;
-
-  @override
-  double get _bottom => bottom;
-
-  @override
-  double get _start => 0.0;
-
-  @override
-  double get _end => 0.0;
 
   /// An Offset describing the vector from the top left of a rectangle to the
   /// top left of that rectangle inset by this object.

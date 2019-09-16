@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:responsive_widgets/responsive_widgets.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('responsive_widgets');

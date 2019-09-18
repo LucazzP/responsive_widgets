@@ -7,3 +7,6 @@
 ## 0.1.2
 - Readme updated.
 - Changed getSizeByDp() to getSize().
+
+## 0.1.3
+- Readme updated.

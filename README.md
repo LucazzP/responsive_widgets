@@ -91,26 +91,12 @@ Have special cases that doesn't have Responsive Widgets created, one of this cas
 
 ## Examples
 
-  
 
-- ### ContainerResponsive
+### Mixed, responsive and normal, respectively
+![Mixed, responsive and normal, respectively](https://i.imgur.com/96pdtzR.jpg)
 
-[![Container responsive and EdgeInsets](https://imgur.com/uW9XCo8.jpg "Container responsive and EdgeInsets")](https://imgur.com/uW9XCo8.jpg  "Container responsive and EdgeInsets")
+### Not responsive page
+![Not responsive page](https://i.imgur.com/WR7UQAB.jpg)
 
-  
-
-- ### IconResponsive
-
-[![IconResponsive](https://imgur.com/v4tilae.jpg "IconResponsive")](https://imgur.com/v4tilae.jpg  "IconResponsive")
-
-  
-
-- ### TextResponsive
-
-[![TextResponsive](https://imgur.com/kD2TTf7.jpg "TextResponsive")](https://imgur.com/kD2TTf7.jpg  "TextResponsive")
-
-  
-
-- ### ResponsiveWidgets().getSize(size)
-
-[![Function getSizeByDp](https://i.imgur.com/4p6hShM.jpg "Function getSize")](https://i.imgur.com/4p6hShM.jpg  "Function getSize")
+### Responsive page
+![Responsive page](https://i.imgur.com/3rzKnfW.jpg)

@@ -1,6 +1,8 @@
 
 # Responsive Widgets
 
+[![pub package](https://img.shields.io/pub/v/responsive_widgets.svg)](https://pub.dev/packages/responsive_widgets)
+
 This plugin helps to create responsive widgets, that makes a auto-size with the **proportion between reference screen size** (width, height and shortest side(dpi))  with the screen that the app is running. The package only changed the original widgets, like "Container" to apply a function that make this calculation.
 
 ## Getting Started  

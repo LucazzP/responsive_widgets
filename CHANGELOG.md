@@ -10,3 +10,7 @@
 
 ## 0.1.3
 - Readme updated.
+
+## 0.1.4
+- Readme updated.
+- Repository url fixed

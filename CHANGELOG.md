@@ -13,4 +13,7 @@
 
 ## 0.1.4
 - Readme updated.
-- Repository url fixed
+- Repository url fixed.
+
+## 0.1.5
+- Ios fixed.

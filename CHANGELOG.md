@@ -17,3 +17,6 @@
 
 ## 0.1.5
 - Ios fixed.
+
+## 0.1.6
+- Updated packages

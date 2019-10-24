@@ -20,3 +20,6 @@
 
 ## 0.1.6
 - Updated packages
+
+## 0.1.7
+- Updated Kotlin and Gradle

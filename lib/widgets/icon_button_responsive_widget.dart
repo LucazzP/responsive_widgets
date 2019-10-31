@@ -151,7 +151,17 @@ class IconButtonResponsive extends IconButton {
         assert(alignment != null),
         assert(autofocus != null),
         assert(icon != null),
-        super(icon: icon, onPressed: onPressed);
+        super(icon: icon, onPressed: onPressed, key: key, iconSize: iconSize, 
+          padding: padding, alignment: alignment, color: color,
+          focusColor: focusColor,
+          hoverColor: hoverColor,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
+          disabledColor: disabledColor,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          tooltip: tooltip
+        );
 
   /// The size of the icon inside the button.
   ///
@@ -324,28 +334,5 @@ class IconButtonResponsive extends IconButton {
         ),
       ),
     );
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty<Widget>('icon', icon, showName: false));
-    properties.add(
-        StringProperty('tooltip', tooltip, defaultValue: null, quoted: false));
-    properties.add(ObjectFlagProperty<VoidCallback>('onPressed', onPressed,
-        ifNull: 'disabled'));
-    properties.add(ColorProperty('color', color, defaultValue: null));
-    properties
-        .add(ColorProperty('disabledColor', disabledColor, defaultValue: null));
-    properties.add(ColorProperty('focusColor', focusColor, defaultValue: null));
-    properties.add(ColorProperty('hoverColor', hoverColor, defaultValue: null));
-    properties.add(
-        ColorProperty('highlightColor', highlightColor, defaultValue: null));
-    properties
-        .add(ColorProperty('splashColor', splashColor, defaultValue: null));
-    properties.add(DiagnosticsProperty<EdgeInsetsGeometry>('padding', padding,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<FocusNode>('focusNode', focusNode,
-        defaultValue: null));
   }
 }

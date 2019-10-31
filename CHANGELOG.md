@@ -23,3 +23,7 @@
 
 ## 0.1.7
 - Updated Kotlin and Gradle
+
+## 0.1.8
+- Keys is now Working
+- Classes code reformated

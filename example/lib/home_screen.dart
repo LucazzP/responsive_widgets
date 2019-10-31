@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         MaterialPageRoute(
                             builder: (context) => NonResponsiveScreen())),
                     child: TextResponsive("Not Responsive Page"),
+                    key: Key('RaisedButton'),
                   ),
                   RaisedButtonResponsive(
                     onPressed: () => Navigator.push(
@@ -47,32 +48,49 @@ class _HomeScreenState extends State<HomeScreen> {
                         MaterialPageRoute(
                             builder: (context) => ResponsiveScreen())),
                     child: TextResponsive("Responsive Page"),
+                    key: Key('RaisedButtonResponsive'),
                   )
                 ],
               ),
-              TextResponsive('Plugin example app'),
-              Text('Plugin example app'),
+              TextResponsive(
+                'Plugin example app',
+                key: Key('TextResponsive'),
+              ),
+              Text(
+                'Plugin example app',
+                key: Key('Text'),
+              ),
               ContainerResponsive(
+                key: Key('ContainerResponsive'),
                 height: 100,
                 width: 200,
                 color: Colors.green,
               ),
               Container(
+                key: Key('Container'),
                 height: 100,
                 width: 200,
                 color: Colors.green,
               ),
-              IconResponsive(Icons.ac_unit),
-              Icon(Icons.ac_unit),
+              IconResponsive(
+                Icons.ac_unit,
+                key: Key('IconResponsive'),
+              ),
+              Icon(
+                Icons.ac_unit,
+                key: Key('Icon'),
+              ),
               IconButtonResponsive(
                 onPressed: () {},
                 icon: Icon(Icons.ac_unit),
+                key: Key('IconButtonResponsive'),
               ),
               IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.ac_unit),
+                key: Key('IconButton'),
               ),
-              //! Never use two responsive widgets like this:
+              ///! Never use two responsive widgets like this:
               IconButtonResponsive(
                 onPressed: () {},
                 icon: IconResponsive(Icons.ac_unit),

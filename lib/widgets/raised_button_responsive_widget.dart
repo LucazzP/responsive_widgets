@@ -199,21 +199,4 @@ class RaisedButtonResponsive extends RaisedButton {
       child: child,
     );
   }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty<double>('elevation', elevation,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<double>('focusElevation', focusElevation,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<double>('hoverElevation', hoverElevation,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<double>(
-        'highlightElevation', highlightElevation,
-        defaultValue: null));
-    properties.add(DiagnosticsProperty<double>(
-        'disabledElevation', disabledElevation,
-        defaultValue: null));
-  }
 }

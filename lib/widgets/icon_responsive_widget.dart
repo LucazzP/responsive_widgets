@@ -69,7 +69,7 @@ class IconResponsive extends Icon {
     this.color,
     this.semanticLabel,
     this.textDirection,
-  }) : super(icon);
+  }) : super(icon, key: key, size: size, color: color, semanticLabel: semanticLabel, textDirection: textDirection);
 
   /// The icon to display. The available icons are described in [Icons].
   ///
@@ -209,14 +209,5 @@ class IconResponsive extends Icon {
         ),
       ),
     );
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(
-        IconDataProperty('icon', icon, ifNull: '<empty>', showName: false));
-    properties.add(DoubleProperty('size', size, defaultValue: null));
-    properties.add(ColorProperty('color', color, defaultValue: null));
   }
 }

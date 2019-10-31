@@ -1,6 +1,7 @@
 name: responsive_widgets_example
 description: Demonstrates how to use the responsive_widgets plugin.
 publish_to: 'none'
+version: 0.0.1+1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

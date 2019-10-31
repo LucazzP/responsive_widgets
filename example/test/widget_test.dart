@@ -11,17 +11,24 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:responsive_widgets_example/main.dart';
 
 void main() {
-  testWidgets('Verify Platform version', (WidgetTester tester) async {
+  testWidgets('Verify If keys of widgets is working', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
 
-    // Verify that platform version is retrieved.
-    expect(
-      find.byWidgetPredicate(
-        (Widget widget) =>
-            widget is Text && widget.data.startsWith('Running on:'),
-      ),
-      findsOneWidget,
-    );
+    expect(find.byKey(Key('RaisedButton')), findsOneWidget);
+    expect(find.byKey(Key('RaisedButtonResponsive')), findsOneWidget);
+
+    expect(find.byKey(Key('Text')), findsOneWidget);
+    expect(find.byKey(Key('TextResponsive')), findsOneWidget);
+
+    expect(find.byKey(Key('Container')), findsOneWidget);
+    expect(find.byKey(Key('ContainerResponsive')), findsOneWidget);
+
+    expect(find.byKey(Key('Icon')), findsOneWidget);
+    expect(find.byKey(Key('IconResponsive')), findsOneWidget);
+
+    expect(find.byKey(Key('IconButton')), findsOneWidget);
+    expect(find.byKey(Key('IconButtonResponsive')), findsOneWidget);
+
   });
 }

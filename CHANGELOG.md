@@ -1,3 +1,6 @@
+## 0.1.10
+- Added assert if the plugin is used without init
+
 ## 0.1.9
 - Changed to static methods on main class
 

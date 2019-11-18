@@ -1,6 +1,6 @@
 name: responsive_widgets
 description: This plugin helps to create responsive widgets, that makes an auto-size with the proportion between reference ScreenSize and the screen that the app is running.
-version: 0.1.9
+version: 0.1.10
 author: 
   Lucas Henrique Polazzo
   <lucashpolazzo2013@gmail.com>

@@ -68,6 +68,7 @@ class ResponsiveWidgets {
   }
 
   static double getSize(double size) {
+    assert(differenceDp != null, "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
     double finalsize = size;
     if (screenWidth != null) {
       if (differenceDp == 0 &&

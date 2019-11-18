@@ -17,7 +17,7 @@ class _ResponsiveScreenState extends State<ResponsiveScreen> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(getSize(50)),
+        preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),
         child: AppBar(
           title: TextResponsive('Responsive page'),
           centerTitle: true,

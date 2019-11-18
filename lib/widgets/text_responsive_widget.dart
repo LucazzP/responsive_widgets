@@ -123,11 +123,19 @@ class TextResponsive extends Text {
           'A non-null String must be provided to a Text widget.',
         ),
         textSpan = null,
-        super(data, key: key, style: style, strutStyle: strutStyle, textAlign: textAlign, 
-          textDirection: textDirection, locale:locale, softWrap: softWrap, overflow: overflow,
-          textScaleFactor: textScaleFactor, maxLines: maxLines, semanticsLabel: semanticsLabel,
-          textWidthBasis: textWidthBasis
-        );
+        super(data,
+            key: key,
+            style: style,
+            strutStyle: strutStyle,
+            textAlign: textAlign,
+            textDirection: textDirection,
+            locale: locale,
+            softWrap: softWrap,
+            overflow: overflow,
+            textScaleFactor: textScaleFactor,
+            maxLines: maxLines,
+            semanticsLabel: semanticsLabel,
+            textWidthBasis: textWidthBasis);
 
   @override
   Widget build(BuildContext context) {
@@ -146,8 +154,8 @@ class TextResponsive extends Text {
           locale, // RichText uses Localizations.localeOf to obtain a default if this is null
       softWrap: softWrap ?? defaultTextStyle.softWrap,
       overflow: overflow ?? defaultTextStyle.overflow,
-      textScaleFactor:
-          getSize(textScaleFactor ?? MediaQuery.textScaleFactorOf(context)),
+      textScaleFactor: ResponsiveWidgets.getSize(
+          textScaleFactor ?? MediaQuery.textScaleFactorOf(context)),
       maxLines: maxLines ?? defaultTextStyle.maxLines,
       strutStyle: strutStyle,
       textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,

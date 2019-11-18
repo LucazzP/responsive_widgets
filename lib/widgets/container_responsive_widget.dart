@@ -45,23 +45,32 @@ class ContainerResponsive extends Container {
         constraints = (width != null || height != null)
             ? constraints?.tighten(
                     width: width != null && widthResponsive
-                        ? getSize(width)
+                        ? ResponsiveWidgets.getSize(width)
                         : width,
                     height: height != null && heightResponsive
-                        ? getSize(height)
+                        ? ResponsiveWidgets.getSize(height)
                         : height) ??
                 BoxConstraints.tightFor(
                     width: width != null && widthResponsive
-                        ? getSize(width)
+                        ? ResponsiveWidgets.getSize(width)
                         : width,
                     height: height != null && heightResponsive
-                        ? getSize(height)
+                        ? ResponsiveWidgets.getSize(height)
                         : height)
             : constraints,
-        super(key: key, alignment: alignment, padding: padding, color: color, 
-        decoration: decoration, foregroundDecoration: foregroundDecoration, 
-        width: width, height: height, constraints: constraints, margin: margin, 
-        transform: transform, child: child);
+        super(
+            key: key,
+            alignment: alignment,
+            padding: padding,
+            color: color,
+            decoration: decoration,
+            foregroundDecoration: foregroundDecoration,
+            width: width,
+            height: height,
+            constraints: constraints,
+            margin: margin,
+            transform: transform,
+            child: child);
 
   /// The [child] contained by the container.
   ///

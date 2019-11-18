@@ -12,6 +12,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowMaterialGrid: true,
       home: HomeScreen(),
     );
   }

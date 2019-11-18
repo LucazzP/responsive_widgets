@@ -69,7 +69,12 @@ class IconResponsive extends Icon {
     this.color,
     this.semanticLabel,
     this.textDirection,
-  }) : super(icon, key: key, size: size, color: color, semanticLabel: semanticLabel, textDirection: textDirection);
+  }) : super(icon,
+            key: key,
+            size: size,
+            color: color,
+            semanticLabel: semanticLabel,
+            textDirection: textDirection);
 
   /// The icon to display. The available icons are described in [Icons].
   ///
@@ -175,7 +180,7 @@ class IconResponsive extends Icon {
         style: TextStyle(
           inherit: false,
           color: iconColor,
-          fontSize: getSize(iconSize),
+          fontSize: ResponsiveWidgets.getSize(iconSize),
           fontFamily: icon.fontFamily,
           package: icon.fontPackage,
         ),
@@ -201,8 +206,8 @@ class IconResponsive extends Icon {
       label: semanticLabel,
       child: ExcludeSemantics(
         child: SizedBox(
-          width: getSize(iconSize),
-          height: getSize(iconSize),
+          width: ResponsiveWidgets.getSize(iconSize),
+          height: ResponsiveWidgets.getSize(iconSize),
           child: Center(
             child: iconWidget,
           ),

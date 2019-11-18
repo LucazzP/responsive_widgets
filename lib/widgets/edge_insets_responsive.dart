@@ -56,10 +56,10 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// Creates insets from offsets from the left, top, right, and bottom.
   EdgeInsetsResponsive.fromLTRB(
       double left, double top, double right, double bottom)
-      : this.left = getSize(left),
-        this.top = getSize(top),
-        this.right = getSize(right),
-        this.bottom = getSize(bottom),
+      : this.left = ResponsiveWidgets.getSize(left),
+        this.top = ResponsiveWidgets.getSize(top),
+        this.right = ResponsiveWidgets.getSize(right),
+        this.bottom = ResponsiveWidgets.getSize(bottom),
         super.fromLTRB(left, top, right, bottom);
 
   /// Creates insets where all the offsets are `value`.
@@ -73,10 +73,10 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// ```
   /// {@end-tool}
   EdgeInsetsResponsive.all(double value)
-      : left = getSize(value),
-        top = getSize(value),
-        right = getSize(value),
-        bottom = getSize(value),
+      : left = ResponsiveWidgets.getSize(value),
+        top = ResponsiveWidgets.getSize(value),
+        right = ResponsiveWidgets.getSize(value),
+        bottom = ResponsiveWidgets.getSize(value),
         super.all(value);
 
   /// Creates insets with only the given values non-zero.
@@ -94,10 +94,10 @@ class EdgeInsetsResponsive extends EdgeInsets {
     double top = 0.0,
     double right = 0.0,
     double bottom = 0.0,
-  })  : this.left = getSize(left),
-        this.top = getSize(top),
-        this.right = getSize(right),
-        this.bottom = getSize(bottom),
+  })  : this.left = ResponsiveWidgets.getSize(left),
+        this.top = ResponsiveWidgets.getSize(top),
+        this.right = ResponsiveWidgets.getSize(right),
+        this.bottom = ResponsiveWidgets.getSize(bottom),
         super.only(left: left, top: top, right: right, bottom: bottom);
 
   /// Creates insets with symmetrical vertical and horizontal offsets.
@@ -113,10 +113,10 @@ class EdgeInsetsResponsive extends EdgeInsets {
   EdgeInsetsResponsive.symmetric({
     double vertical = 0.0,
     double horizontal = 0.0,
-  })  : left = getSize(horizontal),
-        top = getSize(vertical),
-        right = getSize(horizontal),
-        bottom = getSize(vertical),
+  })  : left = ResponsiveWidgets.getSize(horizontal),
+        top = ResponsiveWidgets.getSize(vertical),
+        right = ResponsiveWidgets.getSize(horizontal),
+        bottom = ResponsiveWidgets.getSize(vertical),
         super.symmetric(vertical: vertical, horizontal: horizontal);
 
   /// Creates insets that match the given window padding.
@@ -127,10 +127,10 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// changes.
   EdgeInsetsResponsive.fromWindowPadding(
       ui.WindowPadding padding, double devicePixelRatio)
-      : left = getSize(padding.left / devicePixelRatio),
-        top = getSize(padding.top / devicePixelRatio),
-        right = getSize(padding.right / devicePixelRatio),
-        bottom = getSize(padding.bottom / devicePixelRatio),
+      : left = ResponsiveWidgets.getSize(padding.left / devicePixelRatio),
+        top = ResponsiveWidgets.getSize(padding.top / devicePixelRatio),
+        right = ResponsiveWidgets.getSize(padding.right / devicePixelRatio),
+        bottom = ResponsiveWidgets.getSize(padding.bottom / devicePixelRatio),
         super.fromWindowPadding(padding, devicePixelRatio);
 
   /// An [EdgeInsets] with zero offsets in each direction.

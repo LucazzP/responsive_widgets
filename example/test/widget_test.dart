@@ -11,7 +11,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:responsive_widgets_example/main.dart';
 
 void main() {
-  testWidgets('Verify If keys of widgets is working', (WidgetTester tester) async {
+  testWidgets('Verify If keys of widgets is working',
+      (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
 
@@ -29,6 +30,5 @@ void main() {
 
     expect(find.byKey(Key('IconButton')), findsOneWidget);
     expect(find.byKey(Key('IconButtonResponsive')), findsOneWidget);
-
   });
 }

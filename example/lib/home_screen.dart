@@ -16,10 +16,11 @@ class _HomeScreenState extends State<HomeScreen> {
         referenceHeight: 1920,
         referenceWidth: 1080,
         referenceShortestSide: 411);
+    print(ResponsiveWidgets.safeBlockVertical);
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(getSize(50)),
+        preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),
         child: AppBar(
           title: TextResponsive('Plugin example app'),
           centerTitle: true,
@@ -66,6 +67,32 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 200,
                 color: Colors.green,
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 200,
+                    width: 100,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 20,
+                  ),
+                  ContainerResponsive(
+                    height: 200,
+                    width: 100,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 20,
+                  ),
+                  Container(
+                    height: ResponsiveWidgets.safeBlockVertical * 50,
+                    width: ResponsiveWidgets.safeBlockHorizontal * 20,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
               Container(
                 key: Key('Container'),
                 height: 100,
@@ -90,6 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: Icon(Icons.ac_unit),
                 key: Key('IconButton'),
               ),
+
               ///! Never use two responsive widgets like this:
               IconButtonResponsive(
                 onPressed: () {},

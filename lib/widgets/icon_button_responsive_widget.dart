@@ -151,17 +151,22 @@ class IconButtonResponsive extends IconButton {
         assert(alignment != null),
         assert(autofocus != null),
         assert(icon != null),
-        super(icon: icon, onPressed: onPressed, key: key, iconSize: iconSize, 
-          padding: padding, alignment: alignment, color: color,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          disabledColor: disabledColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tooltip: tooltip
-        );
+        super(
+            icon: icon,
+            onPressed: onPressed,
+            key: key,
+            iconSize: iconSize,
+            padding: padding,
+            alignment: alignment,
+            color: color,
+            focusColor: focusColor,
+            hoverColor: hoverColor,
+            highlightColor: highlightColor,
+            splashColor: splashColor,
+            disabledColor: disabledColor,
+            focusNode: focusNode,
+            autofocus: autofocus,
+            tooltip: tooltip);
 
   /// The size of the icon inside the button.
   ///
@@ -289,13 +294,13 @@ class IconButtonResponsive extends IconButton {
       child: Padding(
         padding: padding,
         child: SizedBox(
-          height: getSize(iconSize),
-          width: getSize(iconSize),
+          height: ResponsiveWidgets.getSize(iconSize),
+          width: ResponsiveWidgets.getSize(iconSize),
           child: Align(
             alignment: alignment,
             child: IconTheme.merge(
               data: IconThemeData(
-                size: getSize(iconSize),
+                size: ResponsiveWidgets.getSize(iconSize),
                 color: currentColor,
               ),
               child: icon,
@@ -326,7 +331,7 @@ class IconButtonResponsive extends IconButton {
           hoverColor: hoverColor ?? Theme.of(context).hoverColor,
           highlightColor: highlightColor ?? Theme.of(context).highlightColor,
           splashColor: splashColor ?? Theme.of(context).splashColor,
-          radius: getSize(math.max(
+          radius: ResponsiveWidgets.getSize(math.max(
             Material.defaultSplashRadius,
             (iconSize + math.min(padding.horizontal, padding.vertical)) * 0.7,
             // x 0.5 for diameter -> radius and + 40% overflow derived from other Material apps.

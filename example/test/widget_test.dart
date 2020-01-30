@@ -8,27 +8,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:responsive_widgets_example/main.dart';
+import 'package:example/main.dart';
 
 void main() {
-  testWidgets('Verify If keys of widgets is working',
-      (WidgetTester tester) async {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
 
-    expect(find.byKey(Key('RaisedButton')), findsOneWidget);
-    expect(find.byKey(Key('RaisedButtonResponsive')), findsOneWidget);
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
 
-    expect(find.byKey(Key('Text')), findsOneWidget);
-    expect(find.byKey(Key('TextResponsive')), findsOneWidget);
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
 
-    expect(find.byKey(Key('Container')), findsOneWidget);
-    expect(find.byKey(Key('ContainerResponsive')), findsOneWidget);
-
-    expect(find.byKey(Key('Icon')), findsOneWidget);
-    expect(find.byKey(Key('IconResponsive')), findsOneWidget);
-
-    expect(find.byKey(Key('IconButton')), findsOneWidget);
-    expect(find.byKey(Key('IconButtonResponsive')), findsOneWidget);
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
   });
 }

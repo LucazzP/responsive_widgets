@@ -1,6 +1,6 @@
-# responsive_widgets_example
+# example
 
-Demonstrates how to use the responsive_widgets plugin.
+A new Flutter project.
 
 ## Getting Started
 

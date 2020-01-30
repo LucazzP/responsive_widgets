@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_widgets_example/home_screen.dart';
+import 'package:example/home_screen.dart';
 
 void main() => runApp(MyApp());
 

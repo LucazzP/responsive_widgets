@@ -10,11 +10,6 @@ class ResponsiveScreen extends StatefulWidget {
 class _ResponsiveScreenState extends State<ResponsiveScreen> {
   @override
   Widget build(BuildContext context) {
-    ResponsiveWidgets().init(context,
-        referenceHeight: 1920,
-        referenceWidth: 1080,
-        referenceShortestSide: 360);
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),

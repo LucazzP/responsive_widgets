@@ -10,11 +10,6 @@ class NonResponsiveScreen extends StatefulWidget {
 class _NonResponsiveScreenState extends State<NonResponsiveScreen> {
   @override
   Widget build(BuildContext context) {
-    ResponsiveWidgets().init(context,
-        referenceHeight: 1920,
-        referenceWidth: 1080,
-        referenceShortestSide: 360);
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),

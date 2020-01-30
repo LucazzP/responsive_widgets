@@ -1,10 +1,35 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../responsive_widgets.dart';
+
 class ResponsiveWidgets {
-  void init(BuildContext context,
-      {double referenceHeight = 0,
-      double referenceWidth = 0,
-      double referenceShortestSide = 360}) {
+
+  static Widget builder({
+    double referenceHeight = 0,
+    double referenceWidth = 0,
+    double referenceShortestSide = 360,
+    Widget child,
+  }) {
+    return LayoutBuilder(
+      builder: (context, constrains) {
+        ResponsiveWidgets().init(
+          context,
+          referenceHeight: referenceHeight,
+          referenceShortestSide: referenceShortestSide,
+          referenceWidth: referenceWidth,
+        );
+        return child;
+      },
+    );
+  }
+
+  void init(
+    BuildContext context, {
+    double referenceHeight = 0,
+    double referenceWidth = 0,
+    double referenceShortestSide = 360,
+  }) {
     _updateScreenReference(
         height: referenceHeight,
         width: referenceWidth,
@@ -68,7 +93,8 @@ class ResponsiveWidgets {
   }
 
   static double getSize(double size) {
-    assert(differenceDp != null, "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
+    assert(differenceDp != null,
+        "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
     double finalsize = size;
     if (screenWidth != null) {
       if (differenceDp == 0 &&

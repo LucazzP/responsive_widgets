@@ -4,7 +4,7 @@
 
 [![pub package](https://img.shields.io/pub/v/responsive_widgets.svg)](https://pub.dev/packages/responsive_widgets)
 
-This plugin helps to create responsive widgets, that makes a auto-size with the **proportion between reference screen size** (width, height and shortest side(dpi))  with the screen that the app is running. The package only changed the original widgets, like "Container" to apply a function that make this calculation.
+This plugin helps to create responsive widgets, that makes auto-size with the **proportion between reference screen size** (width, height and shortest side(dpi))  with the screen that the app is running. The package only changed the original widgets, like "Container" to apply a function that make this calculation.
 
 ## Features
 | Feature / Working with                 | Progress |
@@ -14,28 +14,34 @@ This plugin helps to create responsive widgets, that makes a auto-size with the 
 | Smartphones                            |    ✅    |
 | 5.5 inch screens                       |    ✅    |
 | Vertical mode                          |    ✅    |
-| Horizontal mode                        |    🔜    |
-| Tablet                                 |    🔜    |
-| Tablet on vertical mode                |    🔜    |
-| Tablet on horizontal mode              |    🔜    |
+| Horizontal mode                        |    ✅    |
+| Tablet                                 |    ✅    |
+| Tablet on vertical mode                |    ✅    |
+| Tablet on horizontal mode              |    ✅    |
+| Support for web                        |    ✅    |
 
 ## Getting Started  
 
-First of all you need to use the code `ResponsiveWidgets().init(context)` to make the plugin works. The code need to be placed on the first screen of the app, inside of the build method, like this: [See also in code](https://github.com/LucazzP/responsive_widgets/blob/master/example/lib/home_screen.dart)
+First of all you need to use the code `ResponsiveWidgets.init(context)` to make the plugin works. 
+Use `ResponsiveWidgets.builder(child: )`, to recalculate the proportion every time the sizes of device changes. 
+Inclusive when the device turned to left/right... The code need to be placed on the first screen of the app, inside of
+the build method, like this: [See also in code](https://github.com/LucazzP/responsive_widgets/blob/master/example/lib/home_screen.dart)
 
 
     class  _HomeScreenState  extends  State<HomeScreen> {
 	    @override
 	    Widget  build(BuildContext context) {
 	    
-		    ResponsiveWidgets().init(context,
+		    ResponsiveWidgets.init(context,
 			    referenceHeight: 1920, // Optional
 			    referenceWidth: 1080, // Optional
-			    referenceShortestSide: 411 // Optional, default = 360
+			    referenceShortestSide: 411 // Optional,
 		    );
 		    
-		    return  Scaffold(
-			    body: Container()
+		    return  ResponsiveWidgets.builder(
+		        child: Scaffold(
+                        body: Container()
+                    ),
 		    );
 		}
 	}

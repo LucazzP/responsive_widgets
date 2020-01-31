@@ -13,27 +13,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidgets.builder(
+    ResponsiveWidgets.init(
+      context,
       referenceHeight: 1920,
       referenceWidth: 1080,
       referenceShortestSide: 411,
+    );
+
+    return ResponsiveWidgets.builder(
       child: Scaffold(
-        // body: Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: <Widget>[
-        //     Container(
-        //       height: 200,
-        //       width: 100,
-        //       color: Colors.red,
-        //     ),
-        //     ContainerResponsive(
-        //       height: 200,
-        //       width: 100,
-        //       color: Colors.red,
-        //     ),
-        //   ],
-        // ),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),
           child: AppBar(

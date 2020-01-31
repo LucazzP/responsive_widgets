@@ -1,3 +1,12 @@
+## 1.0.1
+- Added support for Tablet, horizontal mode, and for web.
+- To works the new functionalities is necessary to use `ResponsiveWidgets.builder(child: )`, to recalculate the proportion
+every time the sizes of device changes. Inclusive when the device turned to left/right...
+- `ResponsiveWidgets().init(context)` changed to `ResponsiveWidgets.init(context)`
+- Changed type of Flutter project from plugin to package.
+
+(Breaking changes)
+
 ## 0.1.10
 - Added assert if the plugin is used without init
 

@@ -16,6 +16,10 @@ class _ResponsiveScreenState extends State<ResponsiveScreen> {
         child: AppBar(
           title: TextResponsive('Responsive page'),
           centerTitle: true,
+          leading: IconButtonResponsive(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
         ),
       ),
       body: Center(

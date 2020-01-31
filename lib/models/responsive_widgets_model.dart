@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../responsive_widgets.dart';
-
 class ResponsiveWidgets {
+  static bool initialized = false;
 
   static Widget builder({
-    double referenceHeight = 0,
-    double referenceWidth = 0,
-    double referenceShortestSide = 360,
+    double referenceHeight,
+    double referenceWidth,
+    double referenceShortestSide,
     Widget child,
   }) {
     return LayoutBuilder(
       builder: (context, constrains) {
-        ResponsiveWidgets().init(
+        ResponsiveWidgets.init(
           context,
           referenceHeight: referenceHeight,
           referenceShortestSide: referenceShortestSide,
@@ -24,22 +23,24 @@ class ResponsiveWidgets {
     );
   }
 
-  void init(
+  static void init(
     BuildContext context, {
-    double referenceHeight = 0,
-    double referenceWidth = 0,
-    double referenceShortestSide = 360,
+    double referenceHeight,
+    double referenceWidth,
+    double referenceShortestSide,
   }) {
     _updateScreenReference(
-        height: referenceHeight,
-        width: referenceWidth,
-        shortestSide: referenceShortestSide);
+      height: referenceHeight,
+      width: referenceWidth,
+      shortestSide: referenceShortestSide,
+    );
     _updateScreenDimesion(context);
+    initialized = true;
   }
 
-  double _refrenceScreenHeight;
-  double _refrenceScreenWidth;
-  double _refrenceScreenDp;
+  static double _refrenceScreenHeight;
+  static double _refrenceScreenWidth;
+  static double _refrenceScreenDp;
   //region Screen Size and Proportional according to device
   static double _screenDp;
   static double differenceDp;
@@ -57,7 +58,7 @@ class ResponsiveWidgets {
   static double safeBlockHorizontal;
   static double safeBlockVertical;
 
-  void _updateScreenDimesion(BuildContext context) {
+  static void _updateScreenDimesion(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
@@ -73,18 +74,18 @@ class ResponsiveWidgets {
     safeBlockVertical = (screenHeight - _safeAreaVertical) / 100;
 
     _screenDp = (size.shortestSide != null) ? size.shortestSide : _screenDp;
-    differenceDp = _refrenceScreenDp == 0
+    differenceDp = _refrenceScreenDp == null
         ? _refrenceScreenDp
         : _screenDp / _refrenceScreenDp;
-    differenceScreenWidth = _refrenceScreenWidth == 0
+    differenceScreenWidth = _refrenceScreenWidth == null
         ? _refrenceScreenWidth
         : screenWidth / _refrenceScreenWidth;
-    differenceScreenHeight = _refrenceScreenHeight == 0
+    differenceScreenHeight = _refrenceScreenHeight == null
         ? _refrenceScreenHeight
         : screenHeight / _refrenceScreenHeight;
   }
 
-  void _updateScreenReference(
+  static void _updateScreenReference(
       {double height, double width, double shortestSide}) {
     _refrenceScreenWidth = (width != null) ? width : _refrenceScreenWidth;
     _refrenceScreenHeight = (height != null) ? height : _refrenceScreenHeight;
@@ -97,30 +98,30 @@ class ResponsiveWidgets {
         "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
     double finalSize = size;
     if (screenWidth != null) {
-      if (differenceDp == 0 &&
-          differenceScreenHeight == 0 &&
-          differenceScreenWidth != 0) {
+      if (differenceDp == null &&
+          differenceScreenHeight == null &&
+          differenceScreenWidth != null) {
         finalSize = finalSize * differenceScreenWidth;
-      } else if (differenceDp == 0 &&
-          differenceScreenHeight != 0 &&
-          differenceScreenWidth == 0) {
+      } else if (differenceDp == null &&
+          differenceScreenHeight != null &&
+          differenceScreenWidth == null) {
         finalSize = finalSize * differenceScreenHeight;
-      } else if (differenceDp != 0 &&
-          differenceScreenHeight == 0 &&
-          differenceScreenWidth == 0) {
+      } else if (differenceDp != null &&
+          differenceScreenHeight == null &&
+          differenceScreenWidth == null) {
         finalSize = finalSize * differenceDp;
-      } else if (differenceDp == 0 &&
-          differenceScreenHeight != 0 &&
-          differenceScreenWidth != 0) {
+      } else if (differenceDp == null &&
+          differenceScreenHeight != null &&
+          differenceScreenWidth != null) {
         finalSize =
             finalSize * ((differenceScreenWidth + differenceScreenHeight) / 2);
-      } else if (differenceDp != 0 &&
-          differenceScreenHeight == 0 &&
-          differenceScreenWidth != 0) {
+      } else if (differenceDp != null &&
+          differenceScreenHeight == null &&
+          differenceScreenWidth != null) {
         finalSize = finalSize * ((differenceScreenWidth + differenceDp) / 2);
-      } else if (differenceDp != 0 &&
-          differenceScreenHeight != 0 &&
-          differenceScreenWidth == 0) {
+      } else if (differenceDp != null &&
+          differenceScreenHeight != null &&
+          differenceScreenWidth == null) {
         finalSize = finalSize * ((differenceScreenHeight + differenceDp) / 2);
       } else {
         finalSize = finalSize *

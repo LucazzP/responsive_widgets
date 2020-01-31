@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/responsive_widgets.iml" filepath="$PROJECT_DIR$/responsive_widgets.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/responsive_widgets_android.iml" filepath="$PROJECT_DIR$/android/responsive_widgets_android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/responsive_widgets_example_android.iml" filepath="$PROJECT_DIR$/example/android/responsive_widgets_example_android.iml" />
     </modules>
   </component>
 </project>

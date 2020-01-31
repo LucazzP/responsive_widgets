@@ -1,45 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="responsive_widgets.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/responsive_widgets.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ChangeListManager">
+    <list default="true" id="a038f172-3206-44e7-9ccb-ac46fad8a05d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1X7Ez2dlshaxGbxhH8E0HSjXCRE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/lib" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example/lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a038f172-3206-44e7-9ccb-ac46fad8a05d" name="Default Changelist" comment="" />
+      <created>1580388992241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580388992241</updated>
+      <workItem from="1580389001909" duration="590000" />
+      <workItem from="1580389614061" duration="1015000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2516" height="371" key="GridCell.Tab.0.bottom" timestamp="1580390630206">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2516" height="371" key="GridCell.Tab.0.bottom/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
+    <state width="2516" height="371" key="GridCell.Tab.0.center" timestamp="1580390630206">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2516" height="371" key="GridCell.Tab.0.center/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
+    <state width="2516" height="371" key="GridCell.Tab.0.left" timestamp="1580390630206">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2516" height="371" key="GridCell.Tab.0.left/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
+    <state width="2516" height="371" key="GridCell.Tab.0.right" timestamp="1580390630206">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state width="2516" height="371" key="GridCell.Tab.0.right/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
+    <state x="696" y="425" width="1168" height="678" key="new project wizard" timestamp="1580389581033">
+      <screen x="0" y="23" width="2560" height="1353" />
+    </state>
+    <state x="696" y="425" width="1168" height="678" key="new project wizard/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580389581033" />
   </component>
 </project>

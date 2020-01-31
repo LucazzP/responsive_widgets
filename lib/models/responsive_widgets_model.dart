@@ -1,10 +1,28 @@
 import 'package:flutter/widgets.dart';
 
-class ResponsiveWidgets {
-  void init(BuildContext context,
-      {double referenceHeight = 0,
-      double referenceWidth = 0,
-      double referenceShortestSide = 360}) {
+class ResponsiveWidgets{
+
+  // LayoutBuilder init({
+  //   double referenceHeight = 0,
+  //   double referenceWidth = 0,
+  //   double referenceShortestSide = 360,
+  //   @required Widget child,
+  // }){
+  //   return LayoutBuilder(
+  //     builder: (context, constrains){
+  //       print("object");
+  //       init(context, referenceHeight, referenceWidth, referenceShortestSide);
+  //       return child;
+  //     },
+  //   );
+  // }
+
+  void init(
+    BuildContext context, {
+    double referenceHeight = 0,
+    double referenceWidth = 0,
+    double referenceShortestSide = 360,
+  }) {
     _updateScreenReference(
         height: referenceHeight,
         width: referenceWidth,
@@ -68,41 +86,42 @@ class ResponsiveWidgets {
   }
 
   static double getSize(double size) {
-    assert(differenceDp != null, "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
-    double finalsize = size;
+    assert(differenceDp != null,
+        "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
+    double finalSize = size;
     if (screenWidth != null) {
       if (differenceDp == 0 &&
           differenceScreenHeight == 0 &&
           differenceScreenWidth != 0) {
-        finalsize = finalsize * differenceScreenWidth;
+        finalSize = finalSize * differenceScreenWidth;
       } else if (differenceDp == 0 &&
           differenceScreenHeight != 0 &&
           differenceScreenWidth == 0) {
-        finalsize = finalsize * differenceScreenHeight;
+        finalSize = finalSize * differenceScreenHeight;
       } else if (differenceDp != 0 &&
           differenceScreenHeight == 0 &&
           differenceScreenWidth == 0) {
-        finalsize = finalsize * differenceDp;
+        finalSize = finalSize * differenceDp;
       } else if (differenceDp == 0 &&
           differenceScreenHeight != 0 &&
           differenceScreenWidth != 0) {
-        finalsize =
-            finalsize * ((differenceScreenWidth + differenceScreenHeight) / 2);
+        finalSize =
+            finalSize * ((differenceScreenWidth + differenceScreenHeight) / 2);
       } else if (differenceDp != 0 &&
           differenceScreenHeight == 0 &&
           differenceScreenWidth != 0) {
-        finalsize = finalsize * ((differenceScreenWidth + differenceDp) / 2);
+        finalSize = finalSize * ((differenceScreenWidth + differenceDp) / 2);
       } else if (differenceDp != 0 &&
           differenceScreenHeight != 0 &&
           differenceScreenWidth == 0) {
-        finalsize = finalsize * ((differenceScreenHeight + differenceDp) / 2);
+        finalSize = finalSize * ((differenceScreenHeight + differenceDp) / 2);
       } else {
-        finalsize = finalsize *
+        finalSize = finalSize *
             ((((differenceScreenWidth + differenceScreenHeight) / 2) +
                     differenceDp) /
                 2);
       }
     }
-    return finalsize;
+    return finalSize;
   }
 }

@@ -1,21 +1,28 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class ResponsiveWidgets{
+import '../responsive_widgets.dart';
 
-  // LayoutBuilder init({
-  //   double referenceHeight = 0,
-  //   double referenceWidth = 0,
-  //   double referenceShortestSide = 360,
-  //   @required Widget child,
-  // }){
-  //   return LayoutBuilder(
-  //     builder: (context, constrains){
-  //       print("object");
-  //       init(context, referenceHeight, referenceWidth, referenceShortestSide);
-  //       return child;
-  //     },
-  //   );
-  // }
+class ResponsiveWidgets {
+
+  static Widget builder({
+    double referenceHeight = 0,
+    double referenceWidth = 0,
+    double referenceShortestSide = 360,
+    Widget child,
+  }) {
+    return LayoutBuilder(
+      builder: (context, constrains) {
+        ResponsiveWidgets().init(
+          context,
+          referenceHeight: referenceHeight,
+          referenceShortestSide: referenceShortestSide,
+          referenceWidth: referenceWidth,
+        );
+        return child;
+      },
+    );
+  }
 
   void init(
     BuildContext context, {

@@ -2,10 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:ui' as ui show WindowPadding;
-
-import 'package:flutter/widgets.dart';
-import 'package:responsive_widgets/models/responsive_widgets_model.dart';
+part of '../responsive_widgets.dart';
 
 /// An immutable set of offsets in each of the four cardinal directions.
 ///

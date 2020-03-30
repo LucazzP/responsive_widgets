@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+part of '../responsive_widgets.dart';
 
 class ResponsiveWidgets {
   static bool initialized = false;

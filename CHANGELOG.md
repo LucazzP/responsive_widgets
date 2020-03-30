@@ -1,3 +1,8 @@
+## 1.1.0
+- Breaking change:
+    Fixed imports to be only one: `import 'package:responsive_widgets/responsive_widgets.dart';`, all other imports 
+    won't work more
+
 ## 1.0.2
 - Fixed to run only with context as argument to init.
 

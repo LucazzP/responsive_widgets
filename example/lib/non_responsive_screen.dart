@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_widgets/responsive_widgets.dart';
 
 class NonResponsiveScreen extends StatefulWidget {
   NonResponsiveScreen({Key key}) : super(key: key);
@@ -11,12 +10,9 @@ class _NonResponsiveScreenState extends State<NonResponsiveScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: AppBar(
-          title: TextResponsive('Not Responsive Page'),
-          centerTitle: true,
-        ),
+      appBar: AppBar(
+        title: Text('Not Responsive Page'),
+        centerTitle: true,
       ),
       body: Center(
         child: Container(

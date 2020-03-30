@@ -1,7 +1,3 @@
-// Copyright 2015 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 part of '../responsive_widgets.dart';
 
 /// An immutable set of offsets in each of the four cardinal directions.
@@ -53,11 +49,7 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// Creates insets from offsets from the left, top, right, and bottom.
   EdgeInsetsResponsive.fromLTRB(
       double left, double top, double right, double bottom)
-      : this.left = ResponsiveWidgets.getSize(left),
-        this.top = ResponsiveWidgets.getSize(top),
-        this.right = ResponsiveWidgets.getSize(right),
-        this.bottom = ResponsiveWidgets.getSize(bottom),
-        super.fromLTRB(left, top, right, bottom);
+      : super.fromLTRB(left.w, top.h, right.w, bottom.h);
 
   /// Creates insets where all the offsets are `value`.
   ///
@@ -70,11 +62,7 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// ```
   /// {@end-tool}
   EdgeInsetsResponsive.all(double value)
-      : left = ResponsiveWidgets.getSize(value),
-        top = ResponsiveWidgets.getSize(value),
-        right = ResponsiveWidgets.getSize(value),
-        bottom = ResponsiveWidgets.getSize(value),
-        super.all(value);
+      : super.fromLTRB(value.w, value.h, value.w, value.h);
 
   /// Creates insets with only the given values non-zero.
   ///
@@ -91,11 +79,7 @@ class EdgeInsetsResponsive extends EdgeInsets {
     double top = 0.0,
     double right = 0.0,
     double bottom = 0.0,
-  })  : this.left = ResponsiveWidgets.getSize(left),
-        this.top = ResponsiveWidgets.getSize(top),
-        this.right = ResponsiveWidgets.getSize(right),
-        this.bottom = ResponsiveWidgets.getSize(bottom),
-        super.only(left: left, top: top, right: right, bottom: bottom);
+  }) : super.only(left: left.w, top: top.h, right: right.w, bottom: bottom.h);
 
   /// Creates insets with symmetrical vertical and horizontal offsets.
   ///
@@ -110,54 +94,8 @@ class EdgeInsetsResponsive extends EdgeInsets {
   EdgeInsetsResponsive.symmetric({
     double vertical = 0.0,
     double horizontal = 0.0,
-  })  : left = ResponsiveWidgets.getSize(horizontal),
-        top = ResponsiveWidgets.getSize(vertical),
-        right = ResponsiveWidgets.getSize(horizontal),
-        bottom = ResponsiveWidgets.getSize(vertical),
-        super.symmetric(vertical: vertical, horizontal: horizontal);
-
-  /// Creates insets that match the given window padding.
-  ///
-  /// If you need the current system padding or view insets in the context of a
-  /// widget, consider using [MediaQuery.of] to obtain these values rather than
-  /// using the value from [dart:ui.window], so that you get notified of
-  /// changes.
-  EdgeInsetsResponsive.fromWindowPadding(
-      ui.WindowPadding padding, double devicePixelRatio)
-      : left = ResponsiveWidgets.getSize(padding.left / devicePixelRatio),
-        top = ResponsiveWidgets.getSize(padding.top / devicePixelRatio),
-        right = ResponsiveWidgets.getSize(padding.right / devicePixelRatio),
-        bottom = ResponsiveWidgets.getSize(padding.bottom / devicePixelRatio),
-        super.fromWindowPadding(padding, devicePixelRatio);
+  }) : super.symmetric(vertical: vertical.h, horizontal: horizontal.w);
 
   /// An [EdgeInsets] with zero offsets in each direction.
   static const EdgeInsets zero = EdgeInsets.only();
-
-  /// The offset from the left.
-  final double left;
-
-  /// The offset from the top.
-  final double top;
-
-  /// The offset from the right.
-  final double right;
-
-  /// The offset from the bottom.
-  final double bottom;
-
-  /// An Offset describing the vector from the top left of a rectangle to the
-  /// top left of that rectangle inset by this object.
-  Offset get topLeft => Offset(left, top);
-
-  /// An Offset describing the vector from the top right of a rectangle to the
-  /// top right of that rectangle inset by this object.
-  Offset get topRight => Offset(-right, top);
-
-  /// An Offset describing the vector from the bottom left of a rectangle to the
-  /// bottom left of that rectangle inset by this object.
-  Offset get bottomLeft => Offset(left, -bottom);
-
-  /// An Offset describing the vector from the bottom right of a rectangle to the
-  /// bottom right of that rectangle inset by this object.
-  Offset get bottomRight => Offset(-right, -bottom);
 }

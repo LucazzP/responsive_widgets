@@ -1,3 +1,13 @@
+## 2.0.0
+- Improved all Widgets and removed all unnecessary codes
+- Added SizedBoxResponsive
+- Breaking changes:
+    - Changed the calculation of responsiveness to use the [flutter_screenutils](https://pub.dev/packages/flutter_screenutil).
+    - Removed ResponsiveWidgets.getSize()
+    - 
+    - IconResponsive and IconButtonResponsive excluded, because Screen utils does not support(Will be reviewed this question)
+
+
 ## 1.1.0
 - Breaking change:
     Fixed imports to be only one: `import 'package:responsive_widgets/responsive_widgets.dart';`, all other imports 

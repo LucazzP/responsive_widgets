@@ -11,16 +11,9 @@ class _ResponsiveScreenState extends State<ResponsiveScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),
-        child: AppBar(
-          title: TextResponsive('Responsive page'),
-          centerTitle: true,
-          leading: IconButtonResponsive(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-        ),
+      appBar: AppBar(
+        title: Text('Responsive page'),
+        centerTitle: true,
       ),
       body: Center(
         child: Container(
@@ -36,11 +29,6 @@ class _ResponsiveScreenState extends State<ResponsiveScreen> {
               ),
               RaisedButtonResponsive(
                 onPressed: () {},
-              ),
-              IconResponsive(Icons.ac_unit),
-              IconButtonResponsive(
-                onPressed: () {},
-                icon: Icon(Icons.ac_unit),
               ),
             ],
           ),

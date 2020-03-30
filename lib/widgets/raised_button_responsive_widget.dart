@@ -1,7 +1,3 @@
-// Copyright 2015 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 part of '../responsive_widgets.dart';
 
 /// A material design "raised button".
@@ -184,10 +180,11 @@ class RaisedButtonResponsive extends RaisedButton {
       disabledElevation: buttonTheme.getDisabledElevation(this),
       padding: buttonTheme.getPadding(this),
       constraints: BoxConstraints(
-          maxHeight: ResponsiveWidgets.getSize(boxConstraints.maxHeight),
-          maxWidth: ResponsiveWidgets.getSize(boxConstraints.maxWidth),
-          minHeight: ResponsiveWidgets.getSize(boxConstraints.minHeight),
-          minWidth: ResponsiveWidgets.getSize(boxConstraints.minWidth)),
+        maxHeight: boxConstraints.maxHeight.h,
+        maxWidth: boxConstraints.maxWidth.w,
+        minHeight: boxConstraints.minHeight.h,
+        minWidth: boxConstraints.minWidth.w,
+      ),
       shape: buttonTheme.getShape(this),
       focusNode: focusNode,
       autofocus: autofocus,

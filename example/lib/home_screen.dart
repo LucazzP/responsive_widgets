@@ -14,19 +14,19 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     ResponsiveWidgets.init(
       context,
-      referenceHeight: 1920,
-      referenceWidth: 1080,
-      referenceShortestSide: 411,
+      height: 1920,
+      width: 1080,
+      allowFontScaling: false,
     );
 
     return ResponsiveWidgets.builder(
+      height: 1920,
+      width: 1080,
+      allowFontScaling: false,
       child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(ResponsiveWidgets.getSize(50)),
-          child: AppBar(
-            title: TextResponsive('Plugin example app'),
-            centerTitle: true,
-          ),
+        appBar: AppBar(
+          title: Text('Plugin example app'),
+          centerTitle: true,
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -85,14 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 100,
                       color: Colors.green,
                     ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Container(
-                      height: ResponsiveWidgets.safeBlockVertical * 50,
-                      width: ResponsiveWidgets.safeBlockHorizontal * 20,
-                      color: Colors.green,
-                    ),
                   ],
                 ),
                 Container(
@@ -101,33 +93,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 200,
                   color: Colors.green,
                 ),
-                IconResponsive(
-                  Icons.ac_unit,
-                  key: Key('IconResponsive'),
-                ),
-                Icon(
-                  Icons.ac_unit,
-                  key: Key('Icon'),
-                ),
-                IconButtonResponsive(
-                  onPressed: () {},
-                  icon: Icon(Icons.ac_unit),
-                  key: Key('IconButtonResponsive'),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.ac_unit),
-                  key: Key('IconButton'),
-                ),
-
-                ///! Never use two responsive widgets like this:
-                IconButtonResponsive(
-                  onPressed: () {},
-                  icon: IconResponsive(Icons.ac_unit),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: IconResponsive(Icons.ac_unit),
+                ContainerResponsive(
+                  key: Key('ContainerResponsive2'),
+                  height: 100,
+                  width: 200,
+                  color: Colors.green,
                 ),
               ],
             ),

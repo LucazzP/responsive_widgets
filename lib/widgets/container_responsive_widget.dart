@@ -25,8 +25,7 @@ class ContainerResponsive extends Container {
     EdgeInsetsGeometry margin,
     Matrix4 transform,
     Widget child,
-  })  : 
-        super(
+  }) : super(
             key: key,
             alignment: alignment,
             padding: padding,
@@ -36,21 +35,19 @@ class ContainerResponsive extends Container {
             width: width,
             height: height,
             constraints: (width != null || height != null)
-            ? constraints?.tighten(
-                    width: width != null && widthResponsive
-                        ? width.w
-                        : width,
-                    height: height != null && heightResponsive
-                        ? height.h
-                        : height) ??
-                BoxConstraints.tightFor(
-                    width: width != null && widthResponsive
-                        ? width.w
-                        : width,
-                    height: height != null && heightResponsive
-                        ? height.h
-                        : height)
-            : constraints,
+                ? constraints?.tighten(
+                        width:
+                            width != null && widthResponsive ? width.w : width,
+                        height: height != null && heightResponsive
+                            ? height.h
+                            : height) ??
+                    BoxConstraints.tightFor(
+                        width:
+                            width != null && widthResponsive ? width.w : width,
+                        height: height != null && heightResponsive
+                            ? height.h
+                            : height)
+                : constraints,
             margin: margin,
             transform: transform,
             child: child);

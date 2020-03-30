@@ -152,7 +152,8 @@ class TextResponsive extends Text {
           locale, // RichText uses Localizations.localeOf to obtain a default if this is null
       softWrap: softWrap ?? defaultTextStyle.softWrap,
       overflow: overflow ?? defaultTextStyle.overflow,
-      textScaleFactor: (textScaleFactor ?? MediaQuery.textScaleFactorOf(context)).sp,
+      textScaleFactor:
+          (textScaleFactor ?? MediaQuery.textScaleFactorOf(context)).sp,
       maxLines: maxLines ?? defaultTextStyle.maxLines,
       strutStyle: strutStyle,
       textWidthBasis: textWidthBasis ?? defaultTextStyle.textWidthBasis,

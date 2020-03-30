@@ -89,12 +89,18 @@ class ResponsiveWidgets {
       {double height, double width, double shortestSide}) {
     _refrenceScreenWidth = (width != null) ? width : _refrenceScreenWidth;
     _refrenceScreenHeight = (height != null) ? height : _refrenceScreenHeight;
-    _refrenceScreenDp =
-        (shortestSide != null) ? shortestSide : _refrenceScreenDp;
+    _refrenceScreenDp = (shortestSide != null)
+        ? shortestSide
+        : (height == null && width == null)
+            ? _refrenceScreenDp ?? 360
+            : shortestSide;
   }
 
   static double getSize(double size) {
-    assert(differenceDp != null,
+    assert(
+        differenceDp != null ||
+            differenceScreenHeight != null ||
+            differenceScreenWidth != null,
         "You need to initialize first the ResponsiveWidgets with 'ResponsiveWidgets.init(context)'");
     double finalSize = size;
     if (screenWidth != null) {

@@ -1,3 +1,6 @@
+## 1.0.2
+- Fixed to run only with context as argument to init.
+
 ## 1.0.1
 - Added support for Tablet, horizontal mode, and for web.
 - To works the new functionalities is necessary to use `ResponsiveWidgets.builder(child: )`, to recalculate the proportion

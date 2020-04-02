@@ -52,8 +52,8 @@ class SizedBoxResponsive extends SizedBox {
       : super(
           key: key,
           child: child,
-          width: width.w,
-          height: height.h,
+          width: width == null ? null : width.w,
+          height: height == null ? null : height.h,
         );
 
   /// Creates a box that will become as large as its parent allows.

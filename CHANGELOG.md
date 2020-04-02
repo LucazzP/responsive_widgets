@@ -1,3 +1,6 @@
+## 2.0.1
+- SizedBoxResponsive fix
+
 ## 2.0.0+1
 - Changed README.md
 

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a038f172-3206-44e7-9ccb-ac46fad8a05d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/raised_button_responsive_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/raised_button_responsive_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/responsive_widgets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/responsive_widgets.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -65,29 +65,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2516" height="370" key="GridCell.Tab.0.bottom" timestamp="1580483814718">
-      <screen x="0" y="23" width="2560" height="1353" />
+    <state x="187" y="18" key="SettingsEditor" timestamp="1600408553252">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="2516" height="370" key="GridCell.Tab.0.bottom/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580483814718" />
-    <state width="2516" height="371" key="GridCell.Tab.0.bottom/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
-    <state width="2516" height="370" key="GridCell.Tab.0.center" timestamp="1580483814717">
-      <screen x="0" y="23" width="2560" height="1353" />
-    </state>
-    <state width="2516" height="370" key="GridCell.Tab.0.center/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580483814717" />
-    <state width="2516" height="371" key="GridCell.Tab.0.center/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
-    <state width="2516" height="370" key="GridCell.Tab.0.left" timestamp="1580483814717">
-      <screen x="0" y="23" width="2560" height="1353" />
-    </state>
-    <state width="2516" height="370" key="GridCell.Tab.0.left/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580483814717" />
-    <state width="2516" height="371" key="GridCell.Tab.0.left/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
-    <state width="2516" height="370" key="GridCell.Tab.0.right" timestamp="1580483814718">
-      <screen x="0" y="23" width="2560" height="1353" />
-    </state>
-    <state width="2516" height="370" key="GridCell.Tab.0.right/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580483814718" />
-    <state width="2516" height="371" key="GridCell.Tab.0.right/0.23.2560.1417/2560.-1050.1080.2475@0.23.2560.1417" timestamp="1580390630206" />
-    <state x="696" y="425" width="1168" height="678" key="new project wizard" timestamp="1580389581033">
-      <screen x="0" y="23" width="2560" height="1353" />
-    </state>
-    <state x="696" y="425" width="1168" height="678" key="new project wizard/0.23.2560.1353/2560.-1050.1080.2537@0.23.2560.1353" timestamp="1580389581033" />
+    <state x="187" y="18" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1600408553252" />
   </component>
 </project>

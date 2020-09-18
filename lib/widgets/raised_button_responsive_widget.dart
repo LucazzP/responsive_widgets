@@ -180,10 +180,10 @@ class RaisedButtonResponsive extends RaisedButton {
       disabledElevation: buttonTheme.getDisabledElevation(this),
       padding: buttonTheme.getPadding(this),
       constraints: BoxConstraints(
-        maxHeight: boxConstraints.maxHeight.isNan
+        maxHeight: boxConstraints.maxHeight.isNaN
             ? boxConstraints.maxHeight
             : boxConstraints.maxHeight.h,
-        maxWidth: boxConstraints.maxWidth.isNan
+        maxWidth: boxConstraints.maxWidth.isNaN
             ? boxConstraints.maxWidth
             : boxConstraints.maxWidth.w,
         minHeight: boxConstraints.minHeight.h,

@@ -4,7 +4,9 @@
     <list default="true" id="a038f172-3206-44e7-9ccb-ac46fad8a05d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/widgets/raised_button_responsive_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/raised_button_responsive_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/responsive_widgets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/responsive_widgets.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

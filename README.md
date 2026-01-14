@@ -8,7 +8,12 @@ This plugin helps to create responsive widgets, that makes auto-size with the **
 (width, height)  with the screen that the app is running. The package only changed the original widgets, like "Container" 
 to apply a function that make this calculation.
 
+## Discontinued
+
+My understanding of what is responsive in a application changed, so I don't believe that package solve the problem of responsiveness, it only solve a small percentage of it, adapting into small differences of sizes. That is not true anymore, now with foldable screens and web/desktop support, made us really think in different screens for different sizes, than scale the existing one.
+
 ## Important notes
+
 Since the version 2.0.0, we started to use the package ScreenUtils ([flutter_screenutils](https://pub.dev/packages/flutter_screenutil))
 to calculate all, have so many breaking changes, so if you used this package on the past, you will need **stop** using 
 `ResponsiveWidgets.getSize()` and use the ScreenUtils that is inside of this package. For more informations about the 
